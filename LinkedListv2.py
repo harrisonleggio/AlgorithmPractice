@@ -57,6 +57,8 @@ class LinkedList:
             node = node.next            # moves to next node
         return counter                  # returns counter, which is the size of the Linked List
 
+# main: contains test cases
+# create list > add nodes > print list > remove node > print updated list
 def main():
     List = LinkedList()
     List.addNode(10)
