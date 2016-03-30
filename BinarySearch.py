@@ -1,5 +1,7 @@
 # binary search
 def binarysearch(l, value):             # takes a list and number to search for
+
+    l = sorted(l)
     low = 0                             # low bound starts as first element
     high = len(l)-1                     # high bound starts as last element
     while low <= high:
@@ -11,5 +13,3 @@ def binarysearch(l, value):             # takes a list and number to search for
         else:
             return mid                  # if mid element == value, returns mid element
     return -1                           # returns -1 if element is not found
-
-
