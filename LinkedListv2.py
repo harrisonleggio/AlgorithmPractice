@@ -43,6 +43,7 @@ class LinkedList:
 
     # prints Linked List
     def printList(self):
+        print ("Your linked list is:")
         node = self.head                # temporary placeholder for head
         while node != None:             # traverses entire Linked List
             print (node.data)           # prints node's data
@@ -57,14 +58,29 @@ class LinkedList:
             node = node.next            # moves to next node
         return counter                  # returns counter, which is the size of the Linked List
 
-# main: contains test cases
-# create list > add nodes > print list > remove node > print updated list
+    def findKthtoLast(self, k):
+        n = self.size() - k
+        node = self.head
+        count = 0
+
+        while node != None:
+            if count == n:
+                print (node.data)
+
+            count += 1
+            node = node.next
+
 def main():
     List = LinkedList()
     List.addNode(10)
     List.addNode(20)
     List.addNode(30)
     List.addNode(40)
+    List.addNode(50)
+    List.addNode(60)
+    List.addNode(70)
     List.printList()
-    List.removeNode(20)
-    List.printList()
+    k = int(input("Enter a node to find: "))
+    if k > List.size():
+        print("The list doesn't contain that many nodes!")
+    List.findKthtoLast(k)
