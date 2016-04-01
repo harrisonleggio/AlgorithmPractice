@@ -1,8 +1,6 @@
 # binary search
-# works for BOTH sorted and unsorted arrays
 def binarysearch(l, value):             # takes a list and number to search for
 
-    l = sorted(l)                       # sorts array
     low = 0                             # low bound starts as first element
     high = len(l)-1                     # high bound starts as last element
     while low <= high:
